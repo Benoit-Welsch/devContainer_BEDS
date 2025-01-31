@@ -1,0 +1,26 @@
+{
+	"name": "app",
+	"version": "1.0.50",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "bun --bun run --watch src/index.ts",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"db:push": "bun src/db/migrate.ts",
+		"db:migrate": "npx drizzle-kit generate:sqlite"
+	},
+	"dependencies": {
+		"drizzle-orm": "^0.30.7",
+		"elysia": "latest"
+	},
+	"devDependencies": {
+		"bun-types": "latest",
+		"drizzle-kit": "^0.20.14",
+		"eslint": "^8.56.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.0",
+		"@typescript-eslint/parser": "^7.0.0",
+		"prettier": "^3.2.5",
+		"eslint-config-prettier": "^9.1.0"
+	},
+	"module": "src/index.js"
+}
