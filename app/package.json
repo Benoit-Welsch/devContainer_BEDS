@@ -6,17 +6,18 @@
 		"check": "bunx biome check ./src",
 		"check:fix": "bunx biome check --write ./src",
 		"dev": "bun --bun run --watch src/index.ts",
-		"db:push": "bun src/db/migrate.ts",
-		"db:migrate": "npx drizzle-kit generate:sqlite"
+		"db:push": "drizzle-kit migrate",
+		"db:migrate": "drizzle-kit generate"
 	},
 	"dependencies": {
-		"drizzle-orm": "^0.30.10",
-		"elysia": "latest"
+		"drizzle-orm": "^0.39.1",
+		"elysia": "^1.2.11"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@types/bun": "^1.2.1",
-		"drizzle-kit": "^0.20.18"
+		"@types/bun": "^1.2.2",
+		"better-sqlite3": "^11.8.1",
+		"drizzle-kit": "^0.30.4"
 	},
 	"module": "src/index.js"
 }
