@@ -1,4 +1,4 @@
-# 📄 devContainer_EQB
+# 📄 devContainer_BEDS
 
 Dev container with :
 
